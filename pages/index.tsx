@@ -1,3 +1,4 @@
+import { Button } from "@mantine/core"
 import Head from "next/head"
 
 
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <h1>Hello World! This is Duc personal website</h1>
+        <Button>Hello</Button>
       </main>
     </>
   )
