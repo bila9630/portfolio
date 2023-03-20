@@ -3,17 +3,17 @@ import React from 'react'
 
 const About = () => {
     return (
-        <Container size={700} pos={"relative"}>
-            <Text ta={"center"} fz={40} fw={800} mt={30} mb={5}>
+        <Container size={900} pos={"relative"}>
+            <Text ta={"center"} fz={40} fw={800} mt={30} mb={40}>
                 About
             </Text>
-            <Text mt={30}>
-                Hi, I&apos;m Duc! Currently I&apos;m studying Business Information Systems
-                with a focus on Data Science at the Baden-Wuerttemberg Cooperative State University (DHBW).
-                I&apos;m passionate about building things that make a difference in people&apos;s
-                lives. I&apos;m also a huge fan of the outdoors and love to go hiking, biking,
-                and camping. I&apos;m always looking for new opportunities to learn and grow,
-                so feel free to reach out!
+            <Text>
+                Hi, my name is Duc and I am currently a student at the at the Baden-Wuerttemberg
+                Cooperative State University (DHBW), studying Business Information Systems with a focus
+                on Data Science. My main passion is building solutions that can positively impact people&apos;s
+                lives. In my free time, I love to explore the outdoors through activities such as hiking, biking and
+                camping. Additionally, I enjoy participating in hackathons as a way to meet new people and to broaden
+                my horizons. I&apos;m always eager to learn and open to new opportunities, so feel free to contact me.
             </Text>
             <Space h={30} />
             <Text>My Technology Stack:</Text>
