@@ -15,7 +15,7 @@ const useStyles = createStyles((theme) => ({
 
     inner: {
         position: 'relative',
-        paddingTop: 140,
+        paddingTop: 160,
 
         [BREAKPOINT]: {
             paddingBottom: 80,
@@ -41,6 +41,7 @@ const useStyles = createStyles((theme) => ({
     description: {
         marginTop: theme.spacing.xs,
         marginBottom: theme.spacing.md,
+        color: theme.colors.dark[2],
         fontSize: 24,
 
         [BREAKPOINT]: {
@@ -60,7 +61,7 @@ const HeroTitle = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <Avatar src={"duc.jpg"} size={160} alt="Duc" radius={120} mx={"auto"} />
+                    <Avatar src={"duc.jpg"} size={150} alt="Duc" radius={120} mx={"auto"} />
                 </motion.div>
                 <Center>
                     <motion.h1
@@ -73,7 +74,6 @@ const HeroTitle = () => {
                     </motion.h1>
                 </Center>
                 <Center>
-
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
