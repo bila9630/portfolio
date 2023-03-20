@@ -8,7 +8,7 @@ const About = () => {
                 About
             </Text>
             <Text>
-                Hi, my name is Duc and I am currently a student at the at the Baden-Wuerttemberg
+                Hi, my name is Duc and I am currently a student at the Baden-Wuerttemberg
                 Cooperative State University (DHBW), studying Business Information Systems with a focus
                 on Data Science. My main passion is building solutions that can positively impact people&apos;s
                 lives. In my free time, I love to explore the outdoors through activities such as hiking, biking and
