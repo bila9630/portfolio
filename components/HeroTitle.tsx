@@ -1,40 +1,109 @@
 import React from "react"
-import { Title, Text, Avatar, Container } from '@mantine/core';
+import { Title, Text, Avatar, Container, createStyles, Center, Flex } from '@mantine/core';
 import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
 import { motion } from "framer-motion";
 
+
+const BREAKPOINT = '@media (max-width: 755px)';
+
+const useStyles = createStyles((theme) => ({
+    wrapper: {
+        position: 'relative',
+        boxSizing: 'border-box',
+        minHeight: "100vh",
+    },
+
+    inner: {
+        position: 'relative',
+        paddingTop: 140,
+
+        [BREAKPOINT]: {
+            paddingBottom: 80,
+            paddingTop: 80,
+        },
+    },
+
+    title: {
+        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        fontSize: 60,
+        fontWeight: 800,
+        lineHeight: 1.1,
+        marginTop: 30,
+        marginBottom: 5,
+        padding: 0,
+
+        [BREAKPOINT]: {
+            fontSize: 40,
+            lineHeight: 1.2,
+        },
+    },
+
+    description: {
+        marginTop: theme.spacing.xs,
+        marginBottom: theme.spacing.md,
+        fontSize: 24,
+
+        [BREAKPOINT]: {
+            fontSize: 18,
+        },
+    },
+}));
+
 const HeroTitle = () => {
+    const { classes } = useStyles();
+
     return (
-        <Container mx={"auto"}>
-            <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-            >
-                <Avatar src={"duc.jpg"} size={120} alt="Duc" radius={60} mx={"auto"} />
-            </motion.div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.7, ease: "easeIn" }}
-            >
-                <Title order={1}>Viet Duc Kieu</Title>
-            </motion.div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
-            >
-                <Text>
-                    Business Information Systems Student
-                </Text>
-                <div>
-                    <IconBrandLinkedin size={30} />
-                    <IconBrandGithub size={30} />
-                    <IconMail size={30} />
-                </div>
-            </motion.div>
-        </Container>
+        <div className={classes.wrapper}>
+            <Container size={700} className={classes.inner}>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <Avatar src={"duc.jpg"} size={160} alt="Duc" radius={120} mx={"auto"} />
+                </motion.div>
+                <Center>
+                    <motion.h1
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.7, ease: "easeIn" }}
+                        className={classes.title}
+                    >
+                        Duc Kieu
+                    </motion.h1>
+                </Center>
+                <Center>
+
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
+                    >
+                        <Text className={classes.description}>
+                            Business Information Systems Student
+                        </Text>
+                        <Flex
+                            mih={50}
+                            gap="xl"
+                            justify="center"
+                            align="center"
+                            direction="row"
+                            wrap="wrap"
+                        >
+                            <a href="https://www.linkedin.com/in/duc-kieu/" target={"_blank"}>
+                                <IconBrandLinkedin size={30} />
+                            </a>
+                            <a href="https://github.com/bila9630" target={"_blank"}>
+                                <IconBrandGithub size={30} />
+                            </a>
+                            <a href="mailto:viet.duc.kieu.de">
+                                <IconMail size={30} />
+                            </a>
+                        </Flex>
+                    </motion.div>
+                </Center>
+            </Container>
+        </div>
     )
 }
 
