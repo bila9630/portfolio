@@ -4,7 +4,7 @@ import { ArticleCardImage } from './ArticleCardImage'
 
 const Project = () => {
     return (
-        <Container size={900} pos={"relative"} mb={200}>
+        <Container size={900} pos={"relative"} mb={100}>
             <Text ta={"center"} fz={40} fw={800} mt={100} mb={40}>
                 Project
             </Text>
