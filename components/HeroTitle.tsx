@@ -96,7 +96,7 @@ const HeroTitle = () => {
                             <a href="https://github.com/bila9630" target={"_blank"}>
                                 <IconBrandGithub size={30} />
                             </a>
-                            <a href="mailto:viet.duc.kieu.de">
+                            <a href="mailto:duc.kieu.de">
                                 <IconMail size={30} />
                             </a>
                         </Flex>

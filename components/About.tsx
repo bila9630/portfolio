@@ -1,4 +1,4 @@
-import { Container, Space, Text } from '@mantine/core'
+import { Container, List, Space, Text } from '@mantine/core'
 import React from 'react'
 
 const About = () => {
@@ -17,14 +17,14 @@ const About = () => {
             </Text>
             <Space h={30} />
             <Text>My Technology Stack:</Text>
-            <ul>
+            <List>
                 <li>Python, Javascript, Typescript, Golang, SQL, HTML, CSS</li>
                 <li>Frontend: React, Nextjs, Streamlit</li>
                 <li>Backend: Nodejs, Express, Flask</li>
                 <li>Database: Postgresql, Firebase</li>
                 <li>DevOps: Github Actions, Docker, Kubernetes, Helm, AWS</li>
                 <li>Data Science: Python, Pandas, Numpy, Sklearn, Keras</li>
-            </ul>
+            </List>
         </Container>
     )
 }
