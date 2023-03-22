@@ -1,4 +1,6 @@
-import { createStyles, Paper, Text, Title, Button, rem, Grid } from '@mantine/core';
+import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks'
+import { IconExternalLink } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
     card: {
@@ -26,36 +28,87 @@ const useStyles = createStyles((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
     },
+
+    buttonContainer: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+
+    icon: {
+        marginLeft: theme.spacing.md,
+        marginTop: 3,
+    },
+
 }));
 
 interface ArticleCardImageProps {
     image: string;
     title: string;
     category: string;
+    hostedProjectLink?: string;
+    githubLink?: string;
+    skills?: string[];
+    about?: string[];
+    learnings?: string[];
 }
 
-export function ArticleCardImage({ image, title, category }: ArticleCardImageProps) {
+export function ArticleCardImage({
+    image, title, category, hostedProjectLink,
+    githubLink, skills, about, learnings }: ArticleCardImageProps) {
+
     const { classes } = useStyles();
+    const [opened, { open, close }] = useDisclosure(false);
+
 
     return (
-        <Paper
-            shadow="md"
-            p="xl"
-            radius="md"
-            sx={{ backgroundImage: `url(${image})` }}
-            className={classes.card}
-        >
-            <div>
-                <Text className={classes.category} size="xs">
-                    {category}
-                </Text>
-                <Title order={3} className={classes.title}>
-                    {title}
-                </Title>
-            </div>
-            <Button variant="white" color="dark">
-                Read article
-            </Button>
-        </Paper>
+        <>
+            <Paper
+                shadow="md"
+                p="xl"
+                radius="md"
+                sx={{ backgroundImage: `url(${image})` }}
+                className={classes.card}
+            >
+                <div>
+                    <Text className={classes.category} size="xs">
+                        {category}
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                        {title}
+                    </Title>
+                </div>
+                <Grid className={classes.buttonContainer}>
+                    <Button onClick={open} variant="white" color="dark">
+                        More info
+                    </Button>
+                    {/* only display hostedProjectLink when its given */}
+                    {hostedProjectLink && (
+                        <a href={hostedProjectLink} target="_blank" rel="noreferrer">
+                            <IconExternalLink className={classes.icon} />
+                        </a>
+                    )}
+                </Grid>
+            </Paper>
+
+            {/* Modal that opens when you click on Button */}
+            <Modal opened={opened} onClose={close} size={"70%"} title={"StyleSense"} centered>
+                <Text>Skills Used</Text>
+                <List>
+                    <List.Item>{skills}</List.Item>
+                </List>
+                <Text>About</Text>
+                <List>
+                    {about && about.map((item, index) => (
+                        <List.Item key={index}>{item}</List.Item>
+                    ))}
+                </List>
+                <Text>What I learned</Text>
+                <List>
+                    {learnings && learnings.map((item, index) => (
+                        <List.Item key={index}>{item}</List.Item>
+                    ))}
+                </List>
+            </Modal>
+        </>
     );
 }

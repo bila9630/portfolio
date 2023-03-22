@@ -90,10 +90,10 @@ const HeroTitle = () => {
                             direction="row"
                             wrap="wrap"
                         >
-                            <a href="https://www.linkedin.com/in/duc-kieu/" target={"_blank"}>
+                            <a href="https://www.linkedin.com/in/duc-kieu/" target={"_blank"} rel={"noopener noreferrer"}>
                                 <IconBrandLinkedin size={30} />
                             </a>
-                            <a href="https://github.com/bila9630" target={"_blank"}>
+                            <a href="https://github.com/bila9630" target={"_blank"} rel={"noopener noreferrer"}>
                                 <IconBrandGithub size={30} />
                             </a>
                             <a href="mailto:duc.kieu.de">

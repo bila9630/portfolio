@@ -24,7 +24,7 @@ const Imprint = () => {
                 <Text>N6 8</Text>
                 <Text>68161 Mannheim, Germany</Text>
                 <Text mb={"xl"}>E-mail: duc.kieu@web.de</Text>
-                <Text>All questions and concerns about data privacy at ekipa can be directed by email to duc.kieu@web.de</Text>
+                <Text>All questions and concerns about data privacy can be directed by email to duc.kieu@web.de</Text>
                 <Space h="xl" />
                 <Title order={2}>Liability for contents</Title>
                 <Space h="md" />
