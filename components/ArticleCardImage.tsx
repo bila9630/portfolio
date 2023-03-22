@@ -1,5 +1,5 @@
-import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks'
+import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List, Image } from '@mantine/core';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import { IconExternalLink } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
@@ -58,7 +58,7 @@ export function ArticleCardImage({
 
     const { classes } = useStyles();
     const [opened, { open, close }] = useDisclosure(false);
-
+    const isMobile = useMediaQuery("(max-width: 50em)");
 
     return (
         <>
@@ -91,7 +91,15 @@ export function ArticleCardImage({
             </Paper>
 
             {/* Modal that opens when you click on Button */}
-            <Modal opened={opened} onClose={close} size={"70%"} title={"StyleSense"} centered>
+            <Modal opened={opened} onClose={close} size={"70%"} fullScreen={isMobile} title={"StyleSense"} centered>
+                <Grid gutter={20}>
+                    <Grid.Col xs={12} md={6}>
+                        <Image miw={300} src={"raving1.png"} alt="" />
+                    </Grid.Col>
+                    <Grid.Col xs={12} md={6}>
+                        <Image miw={300} src={"raving2.png"} alt="" />
+                    </Grid.Col>
+                </Grid>
                 <Text>Skills Used</Text>
                 <List>
                     <List.Item>{skills}</List.Item>
