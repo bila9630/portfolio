@@ -43,7 +43,7 @@ const Project = () => {
                         category="Software Engineering"
                         hostedProjectLink="https://code-and-create.vercel.app/"
                         githubLink="https://gitlab.com/gianlucageraci/code-and-create"
-                        skills={["Firebase, React, Next.js, Mantine"]}
+                        skills={["Javascript, Typescript, Firebase, React, Next.js, Mantine"]}
                         about={[
                             "The problem was that employees got staffed on projects that they don't like",
                             "A platform to connect people with projects based on their skills",
@@ -64,6 +64,19 @@ const Project = () => {
                         category="Data Science"
                         hostedProjectLink="https://bila9630-nlp-project-applicationstreamlit-app-w1i1j6.streamlit.app/"
                         githubLink="https://github.com/bila9630/NLP-Project"
+                        projectImageLeft="raving1.png"
+                        projectImageRight="raving2.png"
+                        skills={["Python, NLP, Streamlit, Scikit-learn, Pandas, Matplotlib"]}
+                        about={[
+                            "Classify news articles into categories",
+                            "Used a dataset from Kaggle",
+                            "Project work for the NLP course at DHBW"
+                        ]}
+                        learnings={[
+                            "Learned to work with Scrum rapidly",
+                            "Had a lot of fun working with the team",
+                            "Achieved more than we expected"
+                        ]}
                     />
                 </Grid.Col>
             </Grid>

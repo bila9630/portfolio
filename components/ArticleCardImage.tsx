@@ -47,6 +47,8 @@ interface ArticleCardImageProps {
     category: string;
     hostedProjectLink?: string;
     githubLink?: string;
+    projectImageLeft?: string;
+    projectImageRight?: string;
     skills?: string[];
     about?: string[];
     learnings?: string[];
@@ -54,7 +56,8 @@ interface ArticleCardImageProps {
 
 export function ArticleCardImage({
     image, title, category, hostedProjectLink,
-    githubLink, skills, about, learnings }: ArticleCardImageProps) {
+    githubLink, projectImageLeft, projectImageRight,
+    skills, about, learnings, }: ArticleCardImageProps) {
 
     const { classes } = useStyles();
     const [opened, { open, close }] = useDisclosure(false);
@@ -94,10 +97,10 @@ export function ArticleCardImage({
             <Modal opened={opened} onClose={close} size={"70%"} fullScreen={isMobile} title={"StyleSense"} centered>
                 <Grid gutter={20}>
                     <Grid.Col xs={12} md={6}>
-                        <Image miw={300} src={"raving1.png"} alt="" />
+                        <Image miw={150} mah={400} src={projectImageLeft} alt="StyleSense website image" />
                     </Grid.Col>
                     <Grid.Col xs={12} md={6}>
-                        <Image miw={300} src={"raving2.png"} alt="" />
+                        <Image miw={150} mah={400} src={projectImageRight} alt="StyleSense website image 2" />
                     </Grid.Col>
                 </Grid>
                 <Text>Skills Used</Text>
