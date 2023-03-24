@@ -1,13 +1,14 @@
-import { Container, Grid, Image, List, Space, Text } from '@mantine/core'
+import { Container, Grid, Image, Space, Text } from '@mantine/core'
+// import Image from 'next/image'
 import React from 'react'
 
 const About = () => {
     return (
-        <Container size={1200} pos={"relative"}>
+        <Container size={1300} pos={"relative"}>
             <Text ta={"left"} fz={20} mt={30} mb={40}>
                 Words about myself
             </Text>
-            <Container maw={"80%"} fz={30}>
+            <div>
                 <Text>
                     Hi, my name is Duc and I am currently a student at the Baden-Wuerttemberg
                     Cooperative State University (DHBW), studying Business Information Systems with a focus
@@ -24,29 +25,22 @@ const About = () => {
                     Additionally, I enjoy participating in hackathons as a way to meet new people and to broaden
                     my horizons. I&apos;m always eager to learn and open to new opportunities, so feel free to contact me.
                 </Text>
-            </Container>
+            </div>
             <Space h={320} />
-            {/* <Text>My Technology Stack:</Text>
-            <List>
-                <li>Python, Javascript, Typescript, Golang, SQL, HTML, CSS</li>
-                <li>Frontend: React, Nextjs, Streamlit</li>
-                <li>Backend: Nodejs, Express, Flask</li>
-                <li>Database: Postgresql, Firebase</li>
-                <li>DevOps: Github Actions, Docker, Kubernetes, Helm, AWS</li>
-                <li>Data Science: Python, Pandas, Numpy, Sklearn, Keras</li>
-            </List> */}
+
             {/* three images in the same row */}
             <Grid gutter={40} gutterXl={40}>
                 <Grid.Col xs={12} md={4}>
-                    <Image src={"nature1.jpg"} alt="Nature" />
+                    <Image height={525} radius="md" src={"/nature5.jpg"} alt="Photography of Heidelberg castle" />
+                </Grid.Col>
+                <Grid.Col xs={12} md={4} >
+                    <Image height={525} radius="md" src={"/nature2.jpg"} alt="Photography of a meeting room" />
                 </Grid.Col>
                 <Grid.Col xs={12} md={4}>
-                    <Image src={"nature2.jpg"} alt="Nature" />
-                </Grid.Col>
-                <Grid.Col xs={12} md={4}>
-                    <Image src={"nature3.jpg"} alt="Nature" />
+                    <Image height={525} radius="md" src={"/nature4.jpg"} alt="Photography of Heidelberg street in old town" />
                 </Grid.Col>
             </Grid>
+
         </Container>
     )
 }
