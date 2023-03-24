@@ -1,3 +1,4 @@
+import { Carousel } from '@mantine/carousel';
 import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List, Image } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import { IconExternalLink } from '@tabler/icons-react';
@@ -95,14 +96,22 @@ export function ArticleCardImage({
 
             {/* Modal that opens when you click on Button */}
             <Modal opened={opened} onClose={close} size={"70%"} fullScreen={isMobile} title={"StyleSense"} centered>
-                <Grid gutter={20}>
+                <Carousel mx="auto" withIndicators height={400}>
+                    <Carousel.Slide>
+                        <Image fit="contain" height={400} radius="md" src={projectImageLeft} alt="first screenshot of project" />
+                    </Carousel.Slide>
+                    <Carousel.Slide>
+                        <Image fit="contain" height={400} radius="md" src={projectImageLeft} alt="second screenshot of project" />
+                    </Carousel.Slide>
+                </Carousel>
+                {/* <Grid gutter={20}>
                     <Grid.Col xs={12} md={6}>
                         <Image miw={150} mah={400} src={projectImageLeft} alt="StyleSense website image" />
                     </Grid.Col>
                     <Grid.Col xs={12} md={6}>
                         <Image miw={150} mah={400} src={projectImageRight} alt="StyleSense website image 2" />
                     </Grid.Col>
-                </Grid>
+                </Grid> */}
                 <Text>Skills Used</Text>
                 <List>
                     <List.Item>{skills}</List.Item>

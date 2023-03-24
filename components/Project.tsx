@@ -6,7 +6,7 @@ import { ArticleCardImage } from './ArticleCardImage'
 const Project = () => {
 
     return (
-        <Container size={1100} pos={"relative"} mb={100}>
+        <Container size={1200} pos={"relative"} mt={200} mb={100}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const Project = () => {
             <Grid gutter={40} gutterXl={40}>
                 <Grid.Col xs={12} md={6}>
                     <ArticleCardImage
-                        image="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+                        image="fashion4.png"
                         title="StyleSense - Fashion classification app"
                         category="Data Science"
                         hostedProjectLink="https://bila9630-integrationsseminar-applicationstreamlit-app-a1fjrt.streamlit.app/"
@@ -29,7 +29,7 @@ const Project = () => {
                 </Grid.Col>
                 <Grid.Col xs={12} md={6}>
                     <ArticleCardImage
-                        image="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+                        image="smoothie.png"
                         title="Project Smoothie - Inventory management for smoothie shop"
                         category="Software Engineering"
                         hostedProjectLink="https://github.com/DHBW-Database-Project/Project-Smoothies"
@@ -38,7 +38,7 @@ const Project = () => {
                 </Grid.Col>
                 <Grid.Col xs={12} md={6}>
                     <ArticleCardImage
-                        image="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+                        image="desk.jpg"
                         title="SkillMatch - Staffing people to projects based on skills"
                         category="Software Engineering"
                         hostedProjectLink="https://code-and-create.vercel.app/"
@@ -59,7 +59,7 @@ const Project = () => {
                 </Grid.Col>
                 <Grid.Col xs={12} md={6}>
                     <ArticleCardImage
-                        image="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+                        image="newspaper.png"
                         title="News Classifier - Classify news articles into categories"
                         category="Data Science"
                         hostedProjectLink="https://bila9630-nlp-project-applicationstreamlit-app-w1i1j6.streamlit.app/"
