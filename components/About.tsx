@@ -40,13 +40,31 @@ const About = () => {
             {/* three images in the same row */}
             <Grid gutter={40} gutterXl={40}>
                 <Grid.Col xs={12} md={4}>
-                    <Image height={525} radius="lg" src={"/nature5.jpg"} alt="Photography of Heidelberg castle" />
+                    <Image
+                        height={525}
+                        radius="lg"
+                        src={"/nature1.jpg"}
+                        alt="Photography of Heidelberg castle"
+                        imageProps={{ loading: "lazy" }}
+                    />
                 </Grid.Col>
                 <Grid.Col xs={12} md={4} >
-                    <Image height={525} radius="md" src={"/nature6.jpg"} alt="Photography of a Heidelberg old town" />
+                    <Image
+                        height={525}
+                        radius="md"
+                        src={"/nature2.jpg"}
+                        alt="Photography of a Heidelberg old town"
+                        imageProps={{ loading: "lazy" }}
+                    />
                 </Grid.Col>
                 <Grid.Col xs={12} md={4}>
-                    <Image height={525} radius="md" src={"/nature4.jpg"} alt="Photography of Heidelberg nature" />
+                    <Image
+                        height={525}
+                        radius="md"
+                        src={"/nature3.jpg"}
+                        alt="Photography of Heidelberg nature"
+                        imageProps={{ loading: "lazy" }}
+                    />
                 </Grid.Col>
             </Grid>
 
