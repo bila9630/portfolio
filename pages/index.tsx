@@ -1,5 +1,6 @@
 import About from "@/components/About"
 import { FooterSimple } from "@/components/FooterSimple"
+import Header from "@/components/Header"
 import HeroTitle from "@/components/HeroTitle"
 import Project from "@/components/Project"
 

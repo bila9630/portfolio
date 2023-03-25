@@ -1,10 +1,11 @@
-import { Carousel } from '@mantine/carousel';
+import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel';
 import {
     createStyles, Paper, Text, Title, Button, rem, Grid,
     Modal, List, Image, Badge, Group, Center, Space, ActionIcon
 } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
+import { useState } from 'react';
 
 const useStyles = createStyles((theme) => ({
     card: {
@@ -66,6 +67,11 @@ export function ArticleCardImage({
     const [opened, { open, close }] = useDisclosure(false);
     const isMobile = useMediaQuery("(max-width: 50em)");
 
+    // This is necessary to make carousel work inside an animated component
+    const TRANSITION_DURATION = 200;
+    const [embla, setEmbla] = useState<Embla | null>(null);
+    useAnimationOffsetEffect(embla, TRANSITION_DURATION);
+
     return (
         <>
             <Paper
@@ -106,9 +112,9 @@ export function ArticleCardImage({
 
             {/* Modal that opens when you click on Button */}
             <Modal opened={opened} onClose={close} size={"60%"} fullScreen={isMobile} title={"StyleSense"} centered>
-                <Carousel mx="auto" withIndicators height={400}>
+                <Carousel mx="auto" withIndicators getEmblaApi={setEmbla}>
                     {projectImages && projectImages.map((item, index) => (
-                        <Carousel.Slide key={index}>
+                        <Carousel.Slide key={index} size={"100%"}>
                             <Image
                                 fit="contain"
                                 height={400}
@@ -133,6 +139,7 @@ export function ArticleCardImage({
 
                 <Space mt={"2rem"} />
                 <Grid>
+                    {/* left side with information about the project */}
                     <Grid.Col xs={12} lg={6}>
                         <Text mt={10} ta={"center"} fz="lg" fw={"bold"}>About the project</Text>
                         <Center>
@@ -144,6 +151,7 @@ export function ArticleCardImage({
                         </Center>
                     </Grid.Col>
 
+                    {/* right side with what I learned */}
                     <Grid.Col xs={12} lg={6}>
                         <Text mt={10} ta={"center"} fz="lg" fw={"bold"}>What I learned</Text>
                         <Center>
