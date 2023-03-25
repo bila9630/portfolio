@@ -109,7 +109,15 @@ export function ArticleCardImage({
                 <Carousel mx="auto" withIndicators height={400}>
                     {projectImages && projectImages.map((item, index) => (
                         <Carousel.Slide key={index}>
-                            <Image fit="contain" height={400} radius="md" src={item} alt="screenshot of project" withPlaceholder />
+                            <Image
+                                fit="contain"
+                                height={400}
+                                radius="md"
+                                src={item}
+                                alt="screenshot of project"
+                                imageProps={{ loading: "lazy" }}
+                                withPlaceholder
+                            />
                         </Carousel.Slide>
                     ))}
                 </Carousel>

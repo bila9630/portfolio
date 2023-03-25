@@ -46,6 +46,7 @@ const About = () => {
                         src={"/nature1.jpg"}
                         alt="Photography of Heidelberg castle"
                         imageProps={{ loading: "lazy" }}
+                        withPlaceholder
                     />
                 </Grid.Col>
                 <Grid.Col xs={12} md={4} >
@@ -55,6 +56,7 @@ const About = () => {
                         src={"/nature2.jpg"}
                         alt="Photography of a Heidelberg old town"
                         imageProps={{ loading: "lazy" }}
+                        withPlaceholder
                     />
                 </Grid.Col>
                 <Grid.Col xs={12} md={4}>
@@ -64,6 +66,7 @@ const About = () => {
                         src={"/nature3.jpg"}
                         alt="Photography of Heidelberg nature"
                         imageProps={{ loading: "lazy" }}
+                        withPlaceholder
                     />
                 </Grid.Col>
             </Grid>
