@@ -1,5 +1,5 @@
 import React from "react"
-import { Title, Text, Avatar, Container, createStyles, Center, Flex, ActionIcon } from '@mantine/core';
+import { Text, Avatar, Container, createStyles, Center, Flex, ActionIcon } from '@mantine/core';
 import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
 import { motion } from "framer-motion";
 
@@ -8,14 +8,14 @@ const BREAKPOINT = '@media (max-width: 755px)';
 
 const useStyles = createStyles((theme) => ({
     wrapper: {
-        position: 'relative',
-        boxSizing: 'border-box',
+        position: "relative",
+        boxSizing: "border-box",
         minHeight: "100vh",
     },
 
     inner: {
         position: 'relative',
-        paddingTop: 160,
+        paddingTop: 180,
 
         [BREAKPOINT]: {
             paddingBottom: 80,
@@ -42,7 +42,7 @@ const useStyles = createStyles((theme) => ({
         marginTop: theme.spacing.xs,
         marginBottom: theme.spacing.md,
         color: theme.colors.dark[2],
-        fontSize: 24,
+        fontSize: 28,
 
         [BREAKPOINT]: {
             fontSize: 18,
@@ -61,7 +61,7 @@ const HeroTitle = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <Avatar src={"duc.jpg"} size={150} alt="Duc" radius={120} mx={"auto"} />
+                    <Avatar src={"duc.jpg"} size={130} alt="Duc" radius={120} mx={"auto"} />
                 </motion.div>
                 <Center>
                     <motion.h1
