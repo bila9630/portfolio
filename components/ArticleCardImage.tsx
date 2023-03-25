@@ -1,5 +1,8 @@
 import { Carousel } from '@mantine/carousel';
-import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List, Image, Badge, Group, Container, Center, Space, ActionIcon } from '@mantine/core';
+import {
+    createStyles, Paper, Text, Title, Button, rem, Grid,
+    Modal, List, Image, Badge, Group, Center, Space, ActionIcon
+} from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
 
@@ -106,11 +109,11 @@ export function ArticleCardImage({
                 <Carousel mx="auto" withIndicators height={400}>
                     {projectImages && projectImages.map((item, index) => (
                         <Carousel.Slide key={index}>
-                            <Image fit="contain" height={400} radius="md" src={item} alt="screenshot of project" />
+                            <Image fit="contain" height={400} radius="md" src={item} alt="screenshot of project" withPlaceholder />
                         </Carousel.Slide>
                     ))}
                 </Carousel>
-                
+
                 {/* Skills as badges */}
                 <Center mt={"md"}>
                     <Group spacing={"sm"}>

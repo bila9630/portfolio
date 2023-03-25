@@ -8,13 +8,14 @@ const About = () => {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ amount: 0.5, once: true }}
+                viewport={{ amount: 0.3, once: true }}
                 transition={{ duration: 1 }}
             >
 
                 <Text ta={"left"} fz={20} mt={30} mb={40}>
                     Words about myself
                 </Text>
+                {/* TODO: Width 100% on mobile, 70% on big screen */}
                 <div style={{ width: "70%", fontSize: "2rem" }}>
                     <Text>
                         Hi, my name is Duc and I am currently a student at the Baden-Wuerttemberg
@@ -48,6 +49,7 @@ const About = () => {
                     <Image height={525} radius="md" src={"/nature4.jpg"} alt="Photography of Heidelberg nature" />
                 </Grid.Col>
             </Grid>
+
 
         </Container>
     )
