@@ -1,5 +1,5 @@
 import React from "react"
-import { Title, Text, Avatar, Container, createStyles, Center, Flex } from '@mantine/core';
+import { Title, Text, Avatar, Container, createStyles, Center, Flex, ActionIcon } from '@mantine/core';
 import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
 import { motion } from "framer-motion";
 
@@ -82,6 +82,8 @@ const HeroTitle = () => {
                         <Text className={classes.description}>
                             Business Information Systems Student
                         </Text>
+
+                        {/* Icons container */}
                         <Flex
                             mih={50}
                             gap="xl"
@@ -90,15 +92,41 @@ const HeroTitle = () => {
                             direction="row"
                             wrap="wrap"
                         >
-                            <a href="https://www.linkedin.com/in/duc-kieu/" target={"_blank"} rel={"noopener noreferrer"}>
-                                <IconBrandLinkedin size={30} />
-                            </a>
-                            <a href="https://github.com/bila9630" target={"_blank"} rel={"noopener noreferrer"}>
-                                <IconBrandGithub size={30} />
-                            </a>
-                            <a href="mailto:duc.kieu.de">
-                                <IconMail size={30} />
-                            </a>
+                            <ActionIcon
+                                component="a"
+                                href="https://www.linkedin.com/in/duc-kieu/"
+                                target={"_blank"}
+                                rel={"noopener noreferrer"}
+                                variant={"transparent"}
+                                color={"blue"}
+                                size={"lg"}
+                            >
+                                <IconBrandLinkedin size={"2rem"} />
+                            </ActionIcon>
+
+                            <ActionIcon
+                                component="a"
+                                href="https://github.com/bila9630"
+                                target={"_blank"}
+                                rel={"noopener noreferrer"}
+                                variant={"transparent"}
+                                color={"blue"}
+                                size={"lg"}
+                            >
+                                <IconBrandGithub size={"2rem"} />
+                            </ActionIcon>
+
+                            <ActionIcon
+                                component="a"
+                                href="mailto:duc.kieu.de"
+                                target={"_blank"}
+                                rel={"noopener noreferrer"}
+                                variant={"transparent"}
+                                color={"blue"}
+                                size={"lg"}
+                            >
+                                <IconMail size={"2rem"} />
+                            </ActionIcon>
                         </Flex>
                     </motion.div>
                 </Center>

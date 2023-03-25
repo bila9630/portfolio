@@ -1,5 +1,5 @@
 import { Carousel } from '@mantine/carousel';
-import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List, Image, Badge, Group, Container, Center, Space } from '@mantine/core';
+import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List, Image, Badge, Group, Container, Center, Space, ActionIcon } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
 
@@ -86,9 +86,17 @@ export function ArticleCardImage({
                     </Button>
                     {/* only display hostedProjectLink when its given */}
                     {hostedProjectLink && (
-                        <a href={hostedProjectLink} target="_blank" rel="noreferrer">
-                            <IconExternalLink className={classes.icon} />
-                        </a>
+                        <ActionIcon
+                            component="a"
+                            href={hostedProjectLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            variant={"transparent"}
+                            color={"green"}
+                            className={classes.icon}
+                        >
+                            <IconExternalLink />
+                        </ActionIcon>
                     )}
                 </Grid>
             </Paper>
@@ -102,7 +110,8 @@ export function ArticleCardImage({
                         </Carousel.Slide>
                     ))}
                 </Carousel>
-
+                
+                {/* Skills as badges */}
                 <Center mt={"md"}>
                     <Group spacing={"sm"}>
                         {skills && skills.map((item, index) => (
@@ -137,7 +146,7 @@ export function ArticleCardImage({
                 </Grid>
 
 
-                <Center mt={"2rem"}>
+                <Center mt={"2rem"} mb={"1rem"}>
                     <Group>
                         <Button
                             variant="filled"

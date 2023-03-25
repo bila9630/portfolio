@@ -36,7 +36,7 @@ export function FooterSimple({ links }: FooterSimpleProps) {
     const router = useRouter()
     const { classes } = useStyles();
     const items = links.map((link) => (
-        <Anchor<'a'>
+        <Anchor<"a">
             color="dimmed"
             key={link.label}
             href={link.link}
