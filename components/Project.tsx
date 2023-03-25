@@ -43,7 +43,7 @@ const Project = () => {
                     </Grid.Col>
                     <Grid.Col xs={12} md={6}>
                         <ArticleCardImage
-                            image="CoffeeShopBackground.png"
+                            image="coffeeshopBackground.png"
                             title="Project Smoothie - Inventory management app"
                             category="Software Engineering"
                             githubLink="https://github.com/DHBW-Database-Project/Project-Smoothies"
