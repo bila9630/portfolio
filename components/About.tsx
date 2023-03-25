@@ -8,7 +8,7 @@ const About = () => {
             <Text ta={"left"} fz={20} mt={30} mb={40}>
                 Words about myself
             </Text>
-            <Container fz={"2rem"}>
+            <div style={{ width: "70%", fontSize: "2rem" }}>
                 <Text>
                     Hi, my name is Duc and I am currently a student at the Baden-Wuerttemberg
                     Cooperative State University (DHBW), studying Business Information Systems with a focus
@@ -25,8 +25,8 @@ const About = () => {
                     Additionally, I enjoy participating in hackathons as a way to meet new people and to broaden
                     my horizons. I&apos;m always eager to learn and open to new opportunities, so feel free to contact me.
                 </Text>
-            </Container>
-            <Space h={300} />
+            </div>
+            <Space h={200} />
 
             {/* three images in the same row */}
             <Grid gutter={40} gutterXl={40}>

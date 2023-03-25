@@ -1,7 +1,7 @@
 import { Carousel } from '@mantine/carousel';
-import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List, Image } from '@mantine/core';
+import { createStyles, Paper, Text, Title, Button, rem, Grid, Modal, List, Image, Badge, Group, Container, Center, Space } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks'
-import { IconExternalLink } from '@tabler/icons-react';
+import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
     card: {
@@ -48,8 +48,7 @@ interface ArticleCardImageProps {
     category: string;
     hostedProjectLink?: string;
     githubLink?: string;
-    projectImageLeft?: string;
-    projectImageRight?: string;
+    projectImages?: string[];
     skills?: string[];
     about?: string[];
     learnings?: string[];
@@ -57,8 +56,8 @@ interface ArticleCardImageProps {
 
 export function ArticleCardImage({
     image, title, category, hostedProjectLink,
-    githubLink, projectImageLeft, projectImageRight,
-    skills, about, learnings, }: ArticleCardImageProps) {
+    githubLink, projectImages, skills,
+    about, learnings, }: ArticleCardImageProps) {
 
     const { classes } = useStyles();
     const [opened, { open, close }] = useDisclosure(false);
@@ -95,39 +94,79 @@ export function ArticleCardImage({
             </Paper>
 
             {/* Modal that opens when you click on Button */}
-            <Modal opened={opened} onClose={close} size={"70%"} fullScreen={isMobile} title={"StyleSense"} centered>
+            <Modal opened={opened} onClose={close} size={"60%"} fullScreen={isMobile} title={"StyleSense"} centered>
                 <Carousel mx="auto" withIndicators height={400}>
-                    <Carousel.Slide>
-                        <Image fit="contain" height={400} radius="md" src={projectImageLeft} alt="first screenshot of project" />
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <Image fit="contain" height={400} radius="md" src={projectImageLeft} alt="second screenshot of project" />
-                    </Carousel.Slide>
+                    {projectImages && projectImages.map((item, index) => (
+                        <Carousel.Slide key={index}>
+                            <Image fit="contain" height={400} radius="md" src={item} alt="screenshot of project" />
+                        </Carousel.Slide>
+                    ))}
                 </Carousel>
-                {/* <Grid gutter={20}>
-                    <Grid.Col xs={12} md={6}>
-                        <Image miw={150} mah={400} src={projectImageLeft} alt="StyleSense website image" />
+
+                <Center mt={"md"}>
+                    <Group spacing={"sm"}>
+                        {skills && skills.map((item, index) => (
+                            <Badge key={index}>{item}</Badge>
+                        ))}
+                    </Group>
+                </Center>
+
+                <Space mt={"2rem"} />
+                <Grid>
+                    <Grid.Col xs={12} lg={6}>
+                        <Text mt={10} ta={"center"} fz="lg" fw={"bold"}>About the project</Text>
+                        <Center>
+                            <List mt={10}>
+                                {about && about.map((item, index) => (
+                                    <List.Item key={index}>{item}</List.Item>
+                                ))}
+                            </List>
+                        </Center>
                     </Grid.Col>
-                    <Grid.Col xs={12} md={6}>
-                        <Image miw={150} mah={400} src={projectImageRight} alt="StyleSense website image 2" />
+
+                    <Grid.Col xs={12} lg={6}>
+                        <Text mt={10} ta={"center"} fz="lg" fw={"bold"}>What I learned</Text>
+                        <Center>
+                            <List mt={10}>
+                                {learnings && learnings.map((item, index) => (
+                                    <List.Item key={index}>{item}</List.Item>
+                                ))}
+                            </List>
+                        </Center>
                     </Grid.Col>
-                </Grid> */}
-                <Text>Skills Used</Text>
-                <List>
-                    <List.Item>{skills}</List.Item>
-                </List>
-                <Text>About</Text>
-                <List>
-                    {about && about.map((item, index) => (
-                        <List.Item key={index}>{item}</List.Item>
-                    ))}
-                </List>
-                <Text>What I learned</Text>
-                <List>
-                    {learnings && learnings.map((item, index) => (
-                        <List.Item key={index}>{item}</List.Item>
-                    ))}
-                </List>
+                </Grid>
+
+
+                <Center mt={"2rem"}>
+                    <Group>
+                        <Button
+                            variant="filled"
+                            size={"md"}
+                            component="a"
+                            target={"_blank"}
+                            rel={"noopener noreferrer"}
+                            href={githubLink}
+                            leftIcon={<IconBrandGithub />}
+                        >
+                            Github
+                        </Button>
+                        {/* only display hostedProjectLink when its given */}
+                        {hostedProjectLink && (
+                            <Button
+                                variant="gradient"
+                                size={"md"}
+                                gradient={{ from: 'teal', to: 'blue', deg: 60 }}
+                                component="a"
+                                target={"_blank"}
+                                rel={"noopener noreferrer"}
+                                href={hostedProjectLink}
+                                leftIcon={<IconExternalLink />}
+                            >
+                                Check live project
+                            </Button>
+                        )}
+                    </Group>
+                </Center>
             </Modal>
         </>
     );

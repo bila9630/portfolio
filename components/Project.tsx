@@ -21,29 +21,13 @@ const Project = () => {
             <Grid gutter={40} gutterXl={40}>
                 <Grid.Col xs={12} md={6}>
                     <ArticleCardImage
-                        image="fashion4.png"
-                        title="StyleSense - Fashion classification app"
-                        category="Data Science"
-                        hostedProjectLink="https://bila9630-integrationsseminar-applicationstreamlit-app-a1fjrt.streamlit.app/"
-                    />
-                </Grid.Col>
-                <Grid.Col xs={12} md={6}>
-                    <ArticleCardImage
-                        image="smoothie.png"
-                        title="Project Smoothie - Inventory management for smoothie shop"
-                        category="Software Engineering"
-                        hostedProjectLink="https://github.com/DHBW-Database-Project/Project-Smoothies"
-                        githubLink="https://github.com/DHBW-Database-Project/Project-Smoothies"
-                    />
-                </Grid.Col>
-                <Grid.Col xs={12} md={6}>
-                    <ArticleCardImage
-                        image="desk.jpg"
+                        image="work.png"
                         title="SkillMatch - Staffing people to projects based on skills"
                         category="Software Engineering"
-                        hostedProjectLink="https://code-and-create.vercel.app/"
-                        githubLink="https://gitlab.com/gianlucageraci/code-and-create"
-                        skills={["Javascript, Typescript, Firebase, React, Next.js, Mantine"]}
+                        hostedProjectLink="https://skill-match.vercel.app/"
+                        githubLink="https://github.com/bila9630/SkillMatch"
+                        projectImages={["codeAndCreate.png", "codeAndCreate2.png"]}
+                        skills={["Javascript", "Typescript", "Firebase", "React.js", "Next.js", "Mantine"]}
                         about={[
                             "The problem was that employees got staffed on projects that they don't like",
                             "A platform to connect people with projects based on their skills",
@@ -59,14 +43,54 @@ const Project = () => {
                 </Grid.Col>
                 <Grid.Col xs={12} md={6}>
                     <ArticleCardImage
-                        image="newspaper.png"
+                        image="CoffeeShopBackground.png"
+                        title="Project Smoothie - Inventory management app"
+                        category="Software Engineering"
+                        githubLink="https://github.com/DHBW-Database-Project/Project-Smoothies"
+                        projectImages={["projectSmoothie1.png", "projectSmoothie2.png"]}
+                        skills={["Postgresql", "Flask", "React.js", "React Material UI", "Docker", "Github Actions"]}
+                        about={[
+                            "It was a project for the DHBW Database course",
+                            "The goal was to create a web application for a smoothie shop to manage their inventory",
+                            "The application was created with Thi Anh Vu and Lena Lavrikova"
+                        ]}
+                        learnings={[
+                            "Learned to work with Scrum rapidly",
+                            "Had a lot of fun working with the team",
+                            "Achieved more than we expected"
+                        ]}
+                    />
+                </Grid.Col>
+                <Grid.Col xs={12} md={6}>
+                    <ArticleCardImage
+                        image="fashionBackground.png"
+                        title="StyleSense - Fashion classification app"
+                        category="Data Science"
+                        hostedProjectLink="https://bila9630-integrationsseminar-applicationstreamlit-app-a1fjrt.streamlit.app/"
+                        githubLink="https://github.com/bila9630/StyleSense"
+                        projectImages={["", ""]}
+                        skills={["Python", "Streamlit", "Pandas", "Sklearn", "Keras", "NLP", "CNN"]}
+                        about={[
+                            "It was a project for the DHBW Integrationsseminar course",
+                            "The goal was to create a web application for a fashion shop to classify their products into categories",
+                            "The application was created with Sofie Pischl and Hannah Schult"
+                        ]}
+                        learnings={[
+                            "Learned to work with Scrum rapidly",
+                            "Had a lot of fun working with the team",
+                            "Achieved more than we expected"
+                        ]}
+                    />
+                </Grid.Col>
+                <Grid.Col xs={12} md={6}>
+                    <ArticleCardImage
+                        image="bookshopBackground.png"
                         title="News Classifier - Classify news articles into categories"
                         category="Data Science"
                         hostedProjectLink="https://bila9630-nlp-project-applicationstreamlit-app-w1i1j6.streamlit.app/"
                         githubLink="https://github.com/bila9630/NLP-Project"
-                        projectImageLeft="raving1.png"
-                        projectImageRight="raving2.png"
-                        skills={["Python, NLP, Streamlit, Scikit-learn, Pandas, Matplotlib"]}
+                        projectImages={["raving1.png", "raving2.png"]}
+                        skills={["Python", "Streamlit", "Pandas", "Sklearn", "Keras", "NLP", "RNN"]}
                         about={[
                             "Classify news articles into categories",
                             "Used a dataset from Kaggle",
