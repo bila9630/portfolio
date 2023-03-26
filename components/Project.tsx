@@ -30,10 +30,10 @@ const Project = () => {
                             projectImages={["codeAndCreate.png", "codeAndCreate2.png"]}
                             skills={["Javascript", "Typescript", "Firebase", "React.js", "Next.js", "Mantine"]}
                             about={[
-                                "The problem was that employees got staffed on projects that they don't like",
-                                "A platform to connect people with projects based on their skills",
+                                "A platform to connect people with projects based on their preferences and skills",
+                                "Login data -> email: teamlead@web.de, password: RandomPassword123!",
                                 "Created during the Code and Create hackathon with Gianluca Geraci, Rebekka Roßberg, \
-                            Johannes Pielmeier and Sandra Boucte"
+                                Johannes Pielmeier and Sandra Boucte"
                             ]}
                             learnings={[
                                 "Learned to prioritize features and rapidly develop a prototype",
@@ -71,7 +71,7 @@ const Project = () => {
                             category="Data Science"
                             hostedProjectLink="https://bila9630-integrationsseminar-applicationstreamlit-app-a1fjrt.streamlit.app/"
                             githubLink="https://github.com/bila9630/StyleSense"
-                            projectImages={["", ""]}
+                            projectImages={["clothes1.jpg", "clothes2.jpg"]}
                             skills={["Python", "Streamlit", "Pandas", "Sklearn", "Keras", "NLP", "CNN"]}
                             about={[
                                 "Project work for the Integration seminar at DHBW",
