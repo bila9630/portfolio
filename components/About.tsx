@@ -28,7 +28,7 @@ const About = () => {
                             sx={{ cursor: "pointer" }}
                         >
                             dual study program
-                        </Text>{" "} with SAP as my partner company.
+                        </Text>{" "} at DHBW with SAP as my partner company.
                     </Text>
                     <Space h={30} />
                     <Text>

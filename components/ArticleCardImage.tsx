@@ -1,10 +1,10 @@
 import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel';
 import {
     createStyles, Paper, Text, Title, Button, rem, Grid,
-    Modal, List, Image, Badge, Group, Center, Space, ActionIcon
+    Modal, List, Image, Badge, Group, Center, Space, ActionIcon, ThemeIcon
 } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks'
-import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
+import { IconBrandGithub, IconChevronRight, IconExternalLink } from '@tabler/icons-react';
 import { useState } from 'react';
 
 const useStyles = createStyles((theme) => ({
@@ -139,12 +139,19 @@ export function ArticleCardImage({
                 </Center>
 
                 <Space mt={"2rem"} />
-                <Grid>
+                <Grid mx={{ base: 10, lg: 5 }}>
                     {/* left side with information about the project */}
                     <Grid.Col xs={12} lg={6}>
                         <Text mt={10} ta={"center"} fz="lg" fw={"bold"}>About the project</Text>
                         <Center>
-                            <List mt={10}>
+                            <List
+                                spacing="sm"
+                                mt={10}
+                                center
+                                icon={
+                                    <IconChevronRight size="1rem" />
+                                }
+                            >
                                 {about && about.map((item, index) => (
                                     <List.Item key={index}>{item}</List.Item>
                                 ))}
@@ -156,7 +163,14 @@ export function ArticleCardImage({
                     <Grid.Col xs={12} lg={6}>
                         <Text mt={10} ta={"center"} fz="lg" fw={"bold"}>What I learned</Text>
                         <Center>
-                            <List mt={10}>
+                            <List
+                                spacing="sm"
+                                mt={10}
+                                center
+                                icon={
+                                    <IconChevronRight size="1rem" />
+                                }
+                            >
                                 {learnings && learnings.map((item, index) => (
                                     <List.Item key={index}>{item}</List.Item>
                                 ))}

@@ -1,24 +1,24 @@
-import { Affix, Button, Container, Grid, rem, Text, Transition } from '@mantine/core'
+import { Affix, Box, Center, Grid, rem, Transition } from '@mantine/core'
 import { useWindowScroll } from '@mantine/hooks';
-import { IconArrowUp } from '@tabler/icons-react'
-import React from 'react'
 
 const Header = () => {
-    const [scroll, scrollTo] = useWindowScroll();
+    const [scroll] = useWindowScroll();
 
     return (
-        <Affix position={{ bottom: rem(40), left: "46%" }}>
+        <Affix style={{ left: '50%', transform: 'translateX(-50%)' }} position={{ bottom: rem(40) }}>
             <Transition transition="slide-up" mounted={scroll.y > 0}>
                 {(transitionStyles) => (
-                    <Grid>
-                        <Button
-                            leftIcon={<IconArrowUp size="1rem" />}
-                            style={transitionStyles}
-                            onClick={() => scrollTo({ y: 0 })}
-                        >
-                            Scroll to top
-                        </Button>
-                    </Grid>
+                    <Box
+                        bg="#e5e4df"
+                        c="#1a1917"
+                        style={transitionStyles}
+                    >
+                        <Grid gutter={50}>
+                            <Grid.Col span={4}>Linkedin</Grid.Col>
+                            <Grid.Col span={4}>Github</Grid.Col>
+                            <Grid.Col span={4}>Email</Grid.Col>
+                        </Grid>
+                    </Box>
                 )}
             </Transition>
         </Affix>
@@ -26,3 +26,12 @@ const Header = () => {
 }
 
 export default Header
+
+
+{/* <Button
+    leftIcon={<IconArrowUp size="1rem" />}
+    style={transitionStyles}
+    onClick={() => scrollTo({ y: 0 })}
+    >
+    Scroll to top
+</Button> */}

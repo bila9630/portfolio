@@ -36,9 +36,9 @@ const Project = () => {
                             Johannes Pielmeier and Sandra Boucte"
                             ]}
                             learnings={[
-                                "Learned to work with Scrum rapidly",
+                                "Learned to prioritize features and rapidly develop a prototype",
+                                "Developed the ability to work effectively under time constraints",
                                 "Had a lot of fun working with the team",
-                                "Achieved more than we expected"
                             ]}
                         />
                     </Grid.Col>
@@ -52,14 +52,14 @@ const Project = () => {
                             projectImages={["projectSmoothie1.png", "projectSmoothie2.png"]}
                             skills={["Postgresql", "Flask", "React.js", "React Material UI", "Docker", "Github Actions"]}
                             about={[
-                                "It was a project for the DHBW Database course",
+                                "Project work for the database course at DHBW",
                                 "The goal was to create a web application for a smoothie shop to manage their inventory",
                                 "The application was created with Thi Anh Vu and Lena Lavrikova"
                             ]}
                             learnings={[
-                                "Learned to work with Scrum rapidly",
-                                "Had a lot of fun working with the team",
-                                "Achieved more than we expected"
+                                "Acquired knowledge about database design and normalization",
+                                "Learned to create database schemas and queries",
+                                "Learned to utilize Docker Compose"
                             ]}
                         />
                     </Grid.Col>
@@ -74,14 +74,14 @@ const Project = () => {
                             projectImages={["", ""]}
                             skills={["Python", "Streamlit", "Pandas", "Sklearn", "Keras", "NLP", "CNN"]}
                             about={[
-                                "It was a project for the DHBW Integrationsseminar course",
+                                "Project work for the Integration seminar at DHBW",
                                 "The goal was to create a web application for a fashion shop to classify their products into categories",
                                 "The application was created with Sofie Pischl and Hannah Schult"
                             ]}
                             learnings={[
-                                "Learned to work with Scrum rapidly",
-                                "Had a lot of fun working with the team",
-                                "Achieved more than we expected"
+                                "Acquired knowledge about Computer Vision especially CNNs",
+                                "Deployed the application with Streamlit",
+                                "Learned to work with Scrum"
                             ]}
                         />
                     </Grid.Col>
@@ -96,14 +96,16 @@ const Project = () => {
                             projectImages={["raving1.png", "raving2.png"]}
                             skills={["Python", "Streamlit", "Pandas", "Sklearn", "Keras", "NLP", "RNN"]}
                             about={[
+                                "Project work for the NLP course at DHBW",
                                 "Classify news articles into categories",
-                                "Used a dataset from Kaggle",
-                                "Project work for the NLP course at DHBW"
+                                "The application was created with Sofie, Hannah, Caro and Marvin"
                             ]}
                             learnings={[
-                                "Learned to work with Scrum rapidly",
-                                "Had a lot of fun working with the team",
-                                "Achieved more than we expected"
+                                "Acquired knowledge about Natural Language Processing, especially RNNs and Transformers",
+                                "Gained experience with NLP tools and techniques such as preprocessing, word embedding \
+                                and data augmentation",
+                                "Learned to present the results of a project in a clear and concise way",
+
                             ]}
                         />
                     </Grid.Col>

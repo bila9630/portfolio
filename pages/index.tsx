@@ -1,26 +1,28 @@
 import About from "@/components/About"
 import { FooterSimple } from "@/components/FooterSimple"
-import Header from "@/components/Header"
 import HeroTitle from "@/components/HeroTitle"
 import Project from "@/components/Project"
+import { Box } from "@mantine/core"
 
 export default function Home() {
   return (
     <>
       <main>
-        <HeroTitle />
-        <About />
-        <Project />
-        <FooterSimple links={[
-          {
-            "link": "/privacy",
-            "label": "Privacy policy"
-          },
-          {
-            "link": "/imprint",
-            "label": "Imprint"
-          }
-        ]} />
+        <Box sx={{ overflowX: "hidden" }}>
+          <HeroTitle />
+          <About />
+          <Project />
+          <FooterSimple links={[
+            {
+              "link": "/privacy",
+              "label": "Privacy policy"
+            },
+            {
+              "link": "/imprint",
+              "label": "Imprint"
+            }
+          ]} />
+        </Box>
       </main>
     </>
   )
