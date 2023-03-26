@@ -49,6 +49,7 @@ const useStyles = createStyles((theme) => ({
 interface ArticleCardImageProps {
     image: string;
     title: string;
+    shortTitle: string;
     category: string;
     hostedProjectLink?: string;
     githubLink?: string;
@@ -59,9 +60,9 @@ interface ArticleCardImageProps {
 }
 
 export function ArticleCardImage({
-    image, title, category, hostedProjectLink,
-    githubLink, projectImages, skills,
-    about, learnings, }: ArticleCardImageProps) {
+    image, title, shortTitle, category, hostedProjectLink,
+    githubLink, projectImages, skills, about,
+    learnings, }: ArticleCardImageProps) {
 
     const { classes } = useStyles();
     const [opened, { open, close }] = useDisclosure(false);
@@ -111,7 +112,7 @@ export function ArticleCardImage({
             </Paper>
 
             {/* Modal that opens when you click on Button */}
-            <Modal opened={opened} onClose={close} size={"60%"} fullScreen={isMobile} title={"StyleSense"} centered>
+            <Modal opened={opened} onClose={close} size={"60%"} fullScreen={isMobile} title={shortTitle} centered>
                 <Carousel mx="auto" withIndicators getEmblaApi={setEmbla}>
                     {projectImages && projectImages.map((item, index) => (
                         <Carousel.Slide key={index} size={"100%"}>

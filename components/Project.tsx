@@ -23,6 +23,7 @@ const Project = () => {
                         <ArticleCardImage
                             image="work.png"
                             title="SkillMatch - Match professionals with relevant projects"
+                            shortTitle="SkillMatch"
                             category="Software Engineering"
                             hostedProjectLink="https://skill-match.vercel.app/"
                             githubLink="https://github.com/bila9630/SkillMatch"
@@ -45,6 +46,7 @@ const Project = () => {
                         <ArticleCardImage
                             image="coffee.png"
                             title="Project Smoothie - Inventory management app"
+                            shortTitle="Project Smoothie"
                             category="Software Engineering"
                             githubLink="https://github.com/DHBW-Database-Project/Project-Smoothies"
                             projectImages={["projectSmoothie1.png", "projectSmoothie2.png"]}
@@ -65,6 +67,7 @@ const Project = () => {
                         <ArticleCardImage
                             image="fashionBackground.png"
                             title="StyleSense - Fashion classification app"
+                            shortTitle="StyleSense"
                             category="Data Science"
                             hostedProjectLink="https://bila9630-integrationsseminar-applicationstreamlit-app-a1fjrt.streamlit.app/"
                             githubLink="https://github.com/bila9630/StyleSense"
@@ -86,6 +89,7 @@ const Project = () => {
                         <ArticleCardImage
                             image="bookshopBackground.png"
                             title="News Classifier - Classify news articles into categories"
+                            shortTitle="News Classifier"
                             category="Data Science"
                             hostedProjectLink="https://bila9630-nlp-project-applicationstreamlit-app-w1i1j6.streamlit.app/"
                             githubLink="https://github.com/bila9630/NLP-Project"
