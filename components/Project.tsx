@@ -69,7 +69,7 @@ const Project = () => {
                             title="StyleSense - Fashion classification app"
                             shortTitle="StyleSense"
                             category="Data Science"
-                            hostedProjectLink="https://bila9630-integrationsseminar-applicationstreamlit-app-a1fjrt.streamlit.app/"
+                            hostedProjectLink="https://bila9630-stylesense-applicationstreamlit-app-okes4r.streamlit.app/"
                             githubLink="https://github.com/bila9630/StyleSense"
                             projectImages={["clothes1.jpg", "clothes2.jpg"]}
                             skills={["Python", "Streamlit", "Pandas", "Sklearn", "Keras", "NLP", "CNN"]}
